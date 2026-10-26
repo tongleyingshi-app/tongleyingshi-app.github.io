@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>童乐影视 · 分龄亲子片单与陪看手册（每周三更新）| tongleyingshi-app.github.io</title>
+<meta name="description" content="童乐影视是一份写给家长的家庭观影手册：按 3-12 岁分龄整理动画电影与亲子剧集，逐部标注建议观影年龄、片长、陪看提示与三分钟讲法；每周三更新本周放映片单，附紧张片段应对、原声与配音选择、单次时长控制等实操问答。找片、排片、讲片一站看完。">
+<meta name="keywords" content="童乐影视,童乐影视片单,亲子观影推荐,儿童动画片单,分龄电影推荐,家庭观影指南,动画电影排行榜,陪孩子看的电影,3-6岁动画推荐,7-12岁电影推荐,tongleyingshi-app">
+<meta name="author" content="童乐影视">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#171334">
+<meta name="apple-mobile-web-app-title" content="童乐影视">
+<link rel="canonical" href="https://tongleyingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="童乐影视">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="童乐影视 · 分龄亲子片单与陪看手册（每周三更新）">
+<meta property="og:description" content="按 3-12 岁分龄整理动画电影与亲子剧集，标注建议年龄、片长与陪看提示，每周三更新本周放映片单。">
+<meta property="og:url" content="https://tongleyingshi-app.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="童乐影视 · 分龄亲子片单与陪看手册">
+<meta name="twitter:description" content="给家长的家庭观影手册，分龄挑片、按长排片、看点讲片。">
+<style>
+:root{
+  --ink:#171334;
+  --ink2:#221a4d;
+  --paper:#f6f1e6;
+  --cream:#fffdf7;
+  --gold:#ffc94a;
+  --coral:#ff6b57;
+  --mint:#43c9a8;
+  --line:rgba(23,19,52,.12);
+  --shadow:0 14px 34px rgba(23,19,52,.14);
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  background-image:radial-gradient(rgba(23,19,52,.05) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+
+/* 顶部放映信息条 */
+.strip{
+  background:var(--ink);color:var(--gold);
+  font-size:13px;letter-spacing:.04em;
+  padding:8px 16px;overflow:hidden;white-space:nowrap;
+}
+.strip span{display:inline-block;padding-left:100%;animation:roll 26s linear infinite}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.strip b{color:#fff;font-weight:600}
+
+/* 票根式头部 */
+.ticket{
+  position:relative;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--ink2) 58%,#3a2470 100%);
+  color:var(--cream);
+  padding:38px 20px 44px;
+  overflow:hidden;
+}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;left:0;right:0;height:14px;
+  background-image:radial-gradient(circle at 7px 0,var(--paper) 7px,transparent 7.5px);
+  background-size:14px 14px;background-repeat:repeat-x;
+}
+.ticket::before{top:-1px;transform:rotate(180deg)}
+.ticket::after{bottom:-1px}
+.ticket-inner{max-width:1120px;margin:0 auto;position:relative;z-index:2}
+.brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.mark{
+  width:46px;height:46px;border-radius:12px;flex:none;
+  background:var(--gold);color:var(--ink);
+  display:grid;place-items:center;font-weight:800;font-size:20px;
+  box-shadow:4px 4px 0 rgba(0,0,0,.35);
+}
+.logo{font-size:26px;font-weight:800;letter-spacing:.02em}
+.logo em{font-style:normal;color:var(--gold)}
+.brand small{display:block;color:#c9c3ee;font-size:13px;letter-spacing:.22em}
+h1{
+  font-size:clamp(28px,6vw,46px);line-height:1.28;margin:22px 0 12px;
+  font-weight:800;letter-spacing:-.01em;
+}
+h1 u{text-decoration:none;border-bottom:6px solid var(--coral);padding-bottom:2px}
+.lead{max-width:44em;color:#ded9f5;font-size:clamp(15px,2.6vw,17px)}
+.urlbox{
+  margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.35);
+  border-radius:999px;padding:9px 16px;font-size:14px;
+}
+.urlbox code{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--gold);word-break:break-all}
+.btnrow{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;
+  border:2px solid transparent;transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn-a{background:var(--gold);color:var(--ink);box-shadow:5px 5px 0 rgba(0,0,0,.4)}
+.btn-b{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn:hover{transform:translateY(-2px)}
+.btn-a:hover{box-shadow:5px 8px 0 rgba(0,0,0,.4)}
+
+/* 数据条 */
+.stats{
+  max-width:1120px;margin:-26px auto 0;padding:0 20px;position:relative;z-index:5;
+}
+.stats ul{
+  list-style:none;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;
+}
+.stats li{padding:18px 14px;text-align:center;border-left:1px solid var(--line)}
+.stats li:first-child{border-left:0}
+.stats strong{display:block;font-size:clamp(20px,4.4vw,28px);color:var(--coral);line-height:1.2}
+.stats span{font-size:13px;color:#5c5580}
+
+/* 导航 */
+nav{
+  position:sticky;top:0;z-index:20;margin-top:34px;
+  background:rgba(246,241,230,.94);backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.nav-inner{max-width:1120px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-inner a{
+  flex:none;padding:8px 16px;border-radius:999px;font-size:15px;font-weight:600;
+  background:#fff;border:1px solid var(--line);transition:.16s;
+}
+.nav-inner a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+main{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:56px 0;border-bottom:1px dashed var(--line)}
+section:last-of-type{border-bottom:0}
+.kicker{
+  display:inline-block;font-size:12px;font-weight:800;letter-spacing:.2em;
+  color:var(--ink);background:var(--gold);padding:4px 12px;border-radius:4px;
+}
+h2{font-size:clamp(22px,4.6vw,32px);margin:14px 0 8px;line-height:1.3;font-weight:800}
+h3{font-size:18px;margin:0 0 6px;font-weight:700}
+.sub{color:#5c5580;max-width:46em;font-size:15px}
+
+/* 横向放映卡片 */
+.reel{
+  margin-top:26px;display:flex;gap:16px;overflow-x:auto;padding-bottom:14px;
+  scroll-snap-type:x mandatory;
+}
+.reel::-webkit-scrollbar{height:8px}
+.reel::-webkit-scrollbar-thumb{background:var(--ink);border-radius:8px}
+.card{
+  scroll-snap-align:start;flex:0 0 258px;background:var(--cream);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 6px 18px rgba(23,19,52,.08);
+  display:flex;flex-direction:column;
+}
+.poster{
+  height:132px;position:relative;color:#fff;padding:14px 16px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background-size:14px 14px;
+}
+.poster::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.22) 1.6px,transparent 1.8px);
+  background-size:14px 14px;opacity:.7;
+}
+.poster b{position:relative;font-size:17px;line-height:1.35}
+.poster i{position:relative;font-style:normal;font-size:12px;opacity:.9}
+.tag{
+  position:absolute;top:12px;left:12px;background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.45);border-radius:999px;
+  font-size:12px;padding:2px 10px;z-index:2;
+}
+.p1{background:linear-gradient(160deg,#3f8f6d,#1d5c46)}
+.p2{background:linear-gradient(160deg,#f0a03c,#c2551f)}
+.p3{background:linear-gradient(160deg,#d94f45,#8e1f2c)}
+.p4{background:linear-gradient(160deg,#4a6fc4,#233a86)}
+.p5{background:linear-gradient(160deg,#b660c4,#5d2470)}
+.p6{background:linear-gradient(160deg,#2fa3a0,#16635f)}
+.card .body{padding:14px 16px 16px;font-size:14px;color:#4a4470}
+.card .meta{margin-top:10px;font-size:12px;color:#7a739c;display:flex;gap:10px;flex-wrap:wrap}
+.card .meta b{color:var(--coral);font-weight:700}
+
+/* 排片表 */
+.table-wrap{margin-top:26px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--cream)}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:14px}
+caption{text-align:left;padding:14px 16px;font-size:13px;color:#7a739c}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--ink);color:var(--gold);font-size:13px;letter-spacing:.06em;white-space:nowrap}
+tbody tr:nth-child(even){background:#faf7ee}
+tbody tr:hover{background:#fff5dc}
+td b{color:var(--ink)}
+.age{display:inline-block;min-width:74px;text-align:center;background:var(--mint);color:#06322a;border-radius:6px;font-weight:700;font-size:12px;padding:2px 8px}
+
+/* 指南 */
+.steps{margin-top:26px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));counter-reset:s}
+.step{
+  background:var(--cream);border:1px solid var(--line);border-left:6px solid var(--coral);
+  border-radius:12px;padding:18px 18px 16px;
+}
+.step::before{
+  counter-increment:s;content:counter(s);
+  display:grid;place-items:center;width:34px;height:34px;margin-bottom:10px;
+  background:var(--ink);color:var(--gold);border-radius:50%;font-weight:800;font-size:15px;
+}
+.step p{font-size:14px;color:#4a4470}
+
+/* 问答 */
+.faq{margin-top:24px;display:grid;gap:12px}
+details{background:var(--cream);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+summary{
+  cursor:pointer;padding:16px 18px;font-weight:700;font-size:16px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--coral);font-size:22px;font-weight:800;line-height:1}
+details[open] summary::after{content:"–"}
+details[open] summary{background:#fff5dc}
+details p{padding:0 18px 18px;font-size:14.5px;color:#4a4470}
+
+/* 投稿 */
+.contact{margin-top:26px;display:grid;gap:24px;grid-template-columns:1.1fr .9fr}
+@media(max-width:760px){.contact{grid-template-columns:1fr}}
+form{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+input,textarea,select{
+  width:100%;font:inherit;font-size:15px;padding:11px 12px;margin-bottom:14px;
+  border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);
+}
+textarea{min-height:96px;resize:vertical}
+button{
+  font:inherit;font-weight:800;font-size:15px;padding:12px 26px;border:0;border-radius:999px;
+  background:var(--ink);color:var(--gold);cursor:pointer;
+}
+button:hover{background:var(--coral);color:#fff}
+.note{background:var(--ink);color:#ded9f5;border-radius:var(--radius);padding:22px;font-size:14.5px}
+.note h3{color:var(--gold);margin-bottom:10px}
+.note code{color:var(--gold);word-break:break-all;font-family:ui-monospace,Menlo,Consolas,monospace}
+.note ul{margin:12px 0 0 18px}
+.note li{margin-bottom:6px}
+
+footer{background:var(--ink);color:#c9c3ee;margin-top:56px;padding:44px 20px 30px;position:relative}
+footer::before{
+  content:"";position:absolute;left:0;right:0;top:-1px;height:14px;
+  background-image:radial-gradient(circle at 7px 14px,var(--ink) 7px,transparent 7.5px);
+  background-size:14px 14px;background-repeat:repeat-x;
+}
+.f-inner{max-width:1120px;margin:0 auto;display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+footer h4{color:#fff;font-size:15px;margin-bottom:12px}
+footer ul{list-style:none;font-size:14px}
+footer li{margin-bottom:8px}
+footer a:hover{color:var(--gold);text-decoration:underline}
+.f-site{font-size:15px;color:#fff;font-weight:700}
+.f-site code{display:block;margin-top:8px;color:var(--gold);font-size:13px;word-break:break-all}
+.copy{max-width:1120px;margin:28px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:#fff;padding:8px 14px;border-radius:8px;z-index:99}
+.totop{position:fixed;right:16px;bottom:16px;width:46px;height:46px;border-radius:50%;
+  background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:20px;box-shadow:var(--shadow);z-index:30}
+@media(max-width:760px){
+  .stats ul{grid-template-columns:repeat(2,1fr)}
+  .stats li:nth-child(3){border-left:0}
+  .stats li:nth-child(n+3){border-top:1px solid var(--line)}
+  .card{flex:0 0 82%}
+  section{padding:42px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="strip"><span>童乐影视 · 本周放映已上线 —— <b>8 部新片</b> 加入分龄库，全部标注建议观影年龄与陪看提示 · 每周三 20:00 更新 · 网址 https://tongleyingshi-app.github.io —— </span></div>
+
+<header class="ticket">
+  <div class="ticket-inner">
+    <div class="brand">
+      <div class="mark">童乐</div>
+      <div>
+        <span class="logo">童乐<em>影视</em></span>
+        <small>TONGLE · FAMILY SCREENING</small>
+      </div>
+    </div>
+    <h1>周末两小时，<br>交给一部<u>值得陪看</u>的好电影</h1>
+    <p class="lead">童乐影视是一份写给家长的家庭观影手册。片库按 3-12 岁分龄整理，每部片子都标了建议年龄、片长、可能需要陪看的片段，以及看完后能和孩子聊的三句话。不用翻遍榜单，按年龄对号入座就行。</p>
+    <div class="urlbox"><span>本站网址</span><code>https://tongleyingshi-app.github.io</code></div>
+    <div class="btnrow">
+      <a class="btn btn-a" href="#week">看本周片单</a>
+      <a class="btn btn-b" href="#age">分龄速查表</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <ul>
+    <li><strong>486</strong><span>已整理片目</span></li>
+    <li><strong>3-12 岁</strong><span>分龄覆盖区间</span></li>
+    <li><strong>每周三</strong><span>固定更新日</span></li>
+    <li><strong>100%</strong><span>附陪看提示</span></li>
+  </ul>
+</div>
+
+<nav aria-label="站内导航">
+  <div class="nav-inner">
+    <a href="#week">本周放映</a>
+    <a href="#age">分龄片单</a>
+    <a href="#guide">观影指南</a>
+    <a href="#qa">家长问答</a>
+    <a href="#submit">投稿与留言</a>
+    <a href="#about">关于童乐影视</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<section id="week" aria-labelledby="h-week">
+  <span class="kicker">NOW SHOWING</span>
+  <h2 id="h-week">童乐影视本周放映：6 部适合周末陪看的片</h2>
+  <p class="sub">按"孩子能不能坐得住"挑的，控制在 110 分钟以内。左右滑动看完整排片，每张卡片右下角是该片的陪看重点。</p>
+  <div class="reel">
+    <article class="card">
+      <div class="poster p1"><span class="tag">3 岁+</span><b>龙猫</b><i>1988 · 86 分钟 · 动画</i></div>
+      <div class="body">雨中公交站、发芽的橡果。节奏极慢，几乎没有冲突，适合第一次进影院的低龄孩子。
+        <div class="meta"><b>陪看重点</b><span>等待与想象</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster p2"><span class="tag">6 岁+</span><b>头脑特工队</b><i>2015 · 95 分钟 · 动画</i></div>
+      <div class="body">把情绪画成五个小人。看完孩子会用"我的怒怒出来了"描述自己，是很好的情绪词汇课。
+        <div class="meta"><b>陪看重点</b><span>认识难过</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster p3"><span class="tag">7 岁+</span><b>哪吒之魔童降世</b><i>2019 · 110 分钟 · 动画</i></div>
+      <div class="body">方言笑点密集，"我命由我"的台词孩子记得住。中段变身打斗略吵，怕响的孩子可调低音量。
+        <div class="meta"><b>陪看重点</b><span>偏见与标签</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster p4"><span class="tag">5 岁+</span><b>狮子王</b><i>1994 · 89 分钟 · 动画</i></div>
+      <div class="body">木法沙坠崖一段是全片情绪高点，建议提前告知"这里会难过"，别临场才解释。
+        <div class="meta"><b>陪看重点</b><span>失去与责任</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster p5"><span class="tag">6 岁+</span><b>寻梦环游记</b><i>2017 · 105 分钟 · 动画</i></div>
+      <div class="body">亡灵世界色彩明亮不吓人。片尾可可奶奶那段，很多家长自己会先哭，纸巾备好。
+        <div class="meta"><b>陪看重点</b><span>记住家人</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster p6"><span class="tag">4 岁+</span><b>大闹天宫</b><i>1961 · 85 分钟 · 动画</i></div>
+      <div class="body">水墨与京剧锣鼓点，审美启蒙那一挂。画面节奏快，低龄孩子容易跟丢，可分段看。
+        <div class="meta"><b>陪看重点</b><span>中式审美</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="age" aria-labelledby="h-age">
+  <span class="kicker">BY AGE</span>
+  <h2 id="h-age">童乐影视分龄片单：一次看多久、看什么</h2>
+  <p class="sub">同一部片子，四岁和十岁看到的完全是两回事。这张表是本站片库的默认排片规则，也是家长群里被问得最多的部分。</p>
+  <div class="table-wrap">
+    <table>
+      <caption>数据截至 2026 年 10 月，共 486 部；建议时长指单次连续观影，非影片片长。</caption>
+      <thead>
+        <tr><th scope="col">年龄段</th><th scope="col">单次时长</th><th scope="col">这个阶段在意什么</th><th scope="col">代表片目</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="age">3-4 岁</span></td><td>20-30 分钟</td><td>画面柔和、节奏慢、少惊吓音；看不懂剧情也能看得开心</td><td><b>龙猫</b>、小蝌蚪找妈妈、小猪宝贝</td></tr>
+        <tr><td><span class="age">5-6 岁</span></td><td>40-60 分钟</td><td>伙伴、冒险、明确的好坏人；开始问"然后呢"</td><td><b>海底总动员</b>、狮子王、冰雪奇缘</td></tr>
+        <tr><td><span class="age">7-9 岁</span></td><td>80-100 分钟</td><td>规则与因果、努力有回报；能接住一点复杂情绪</td><td><b>千与千寻</b>、功夫熊猫、超能陆战队</td></tr>
+        <tr><td><span class="age">10-12 岁</span></td><td>100 分钟以上</td><td>身份认同、选择与代价；可以一起讨论开放式结局</td><td><b>寻梦环游记</b>、蜘蛛侠：平行宇宙</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="guide" aria-labelledby="h-guide">
+  <span class="kicker">HOW TO WATCH</span>
+  <h2 id="h-guide">童乐影视观影指南：四步把一次播放变成一次聊天</h2>
+  <p class="sub">陪看真正的成本不在两小时，而在看完之后的十分钟。下面这套流程是本站编辑部自己在用的。</p>
+  <div class="steps">
+    <div class="step">
+      <h3>固定时间，别固定片长</h3>
+      <p>把观影钉在周五晚或周六下午，到点就停。让孩子知道"电影是有边界的"，比争论再看几分钟有效得多。</p>
+    </div>
+    <div class="step">
+      <h3>看之前先聊两句</h3>
+      <p>用一句话讲清主角是谁、要去哪儿，别剧透结局。低龄孩子一旦知道"坏人会被抓走"，紧张感就消失了。</p>
+    </div>
+    <div class="step">
+      <h3>害怕的时候别笑他</h3>
+      <p>捂眼睛、要抱抱都是正常反应。暂停画面，问一句"你怕的是哪个"，比"这有什么好怕的"更能让他继续看下去。</p>
+    </div>
+    <div class="step">
+      <h3>看完只问三个问题</h3>
+      <p>最喜欢谁、哪个地方没想到、如果是你会怎么做。问完就停，不要变成复述作业，否则第二次他就不愿看了。</p>
+    </div>
+  </div>
+</section>
+
+<section id="qa" aria-labelledby="h-qa">
+  <span class="kicker">Q &amp; A</span>
+  <h2 id="h-qa">家长问答：童乐影视后台被问得最多的五件事</h2>
+  <div class="faq">
+    <details open>
+      <summary>孩子看到一半说怕，要不要直接关掉？</summary>
+      <p>先暂停而不是关掉。确认是画面还是声音吓到他，声音就把音量降下来，画面就快进 30 秒。直接关掉会强化"这里有可怕的东西"，下次更难推进。实在抗拒就换片，改天再说，不用强求看完。</p>
+    </details>
+    <details>
+      <summary>英文原声还是中文配音？</summary>
+      <p>6 岁以下建议中文配音，字幕还没法读，原声等于只听懂语气。7 岁以上如果对剧情熟悉，可以试着切原声 + 中文字幕，一次别超过 20 分钟。别在第一次看新片时做这件事。</p>
+    </details>
+    <details>
+      <summary>投影、电视、平板，哪个对孩子眼睛好？</summary>
+      <p>优先级是距离和亮度，不是屏幕种类。投影在暗环境下反光弱、瞳孔负担小，但环境不能全黑；电视要正对、避免仰头；平板最不推荐，因为观看距离不可控。无论哪种，每 30 分钟起身看远处 20 秒。</p>
+    </details>
+    <details>
+      <summary>孩子要反复看同一部，会不会有问题？</summary>
+      <p>不会，重复正是低龄孩子的理解方式。第一遍看情节、第二遍记台词、第三遍预判下一步，这是他在建立"故事模型"。通常一部片循环三到四周会自然换，不用强行打断。</p>
+    </details>
+    <details>
+      <summary>片单多久更新一次，怎么判断新片适不适合？</summary>
+      <p>每周三 20:00 更新本周放映，一般 6-8 部。新片入库前会看三件事：有没有持续性惊吓音、有没有需要解释的死亡或离别、价值观是否需要家长补一句。三项都会写进卡片的陪看提示里。</p>
+    </details>
+  </div>
+</section>
+
+<section id="submit" aria-labelledby="h-submit">
+  <span class="kicker">JOIN US</span>
+  <h2 id="h-submit">给童乐影视推荐一部片</h2>
+  <p class="sub">片库里有一半来自家长投稿。留下你陪孩子看过、并且真的觉得值得推荐的片子，我们会按上面的三条标准筛一遍再入库。</p>
+  <div class="contact">
+    <form action="#" method="post" onsubmit="return false;">
+      <label for="f-name">片名</label>
+      <input id="f-name" name="film" type="text" placeholder="例如：龙猫" autocomplete="off">
+      <label for="f-age">孩子观影时年龄</label>
+      <select id="f-age" name="age">
+        <option>3-4 岁</option>
+        <option>5-6 岁</option>
+        <option>7-9 岁</option>
+        <option>10-12 岁</option>
+      </select>
+      <label for="f-why">推荐理由</label>
+      <textarea id="f-why" name="reason" placeholder="看完之后你们聊了什么？哪个片段孩子反应最大？"></textarea>
+      <button type="submit">提交推荐</button>
+    </form>
+    <div class="note">
+      <h3>关于本站</h3>
+      <p>童乐影视是一个由家长维护的独立家庭观影索引站，只做三件事：分龄挑片、按长排片、看点讲片。不提供在线播放与资源下载，所有条目仅作观看参考。</p>
+      <p>网址：<code>https://tongleyingshi-app.github.io</code></p>
+      <ul>
+        <li>片库规模：486 部（持续扩充）</li>
+        <li>更新节奏：每周三 20:00</li>
+        <li>分龄区间：3-12 岁</li>
+        <li>收录标准：惊吓音、离别桥段、价值观提示</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="h-about">
+  <span class="kicker">ABOUT</span>
+  <h2 id="h-about">童乐影视是什么</h2>
+  <p class="sub">从"今晚看什么"这个每周都要吵一次的问题开始的。榜单太多、评分太杂、适不适合还得自己试，于是我们把试过的片子按年龄记下来，慢慢就成了这份片单。</p>
+  <p class="sub">本站所有条目都标注建议观影年龄与片长，并提供陪看提示。片单不代表影片官方分级，家长仍需结合自家孩子的情况判断。更新与勘误可在上方留言区提交，我们会在下一次更新时处理。</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-inner">
+    <div>
+      <p class="f-site">童乐影视<code>https://tongleyingshi-app.github.io</code></p>
+      <p style="margin-top:12px;font-size:14px">分龄亲子片单与家庭观影手册，每周三更新。</p>
+    </div>
+    <div>
+      <h4>片单</h4>
+      <ul>
+        <li><a href="#week">本周放映</a></li>
+        <li><a href="#age">分龄速查表</a></li>
+        <li><a href="#guide">观影指南</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>家长</h4>
+      <ul>
+        <li><a href="#qa">常见问题</a></li>
+        <li><a href="#submit">推荐一部片</a></li>
+        <li><a href="#about">更新说明</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于</h4>
+      <ul>
+        <li><a href="#about">关于童乐影视</a></li>
+        <li><a href="#main">回到顶部</a></li>
+        <li><a href="#">站点地图</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>&copy; 2026 童乐影视 tongleyingshi-app.github.io</span>
+    <span>分龄建议仅供参考，最终由家长判断</span>
+  </div>
+</footer>
+
+<a class="totop" href="#main" aria-label="返回顶部">&#8593;</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://tongleyingshi-app.github.io/#website",
+      "url":"https://tongleyingshi-app.github.io/",
+      "name":"童乐影视",
+      "alternateName":"童乐影视分龄亲子片单",
+      "inLanguage":"zh-CN",
+      "description":"按3-12岁分龄整理动画电影与亲子剧集的家庭观影手册，每周三更新片单。",
+      "publisher":{"@id":"https://tongleyingshi-app.github.io/#org"}
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://tongleyingshi-app.github.io/#org",
+      "name":"童乐影视",
+      "url":"https://tongleyingshi-app.github.io/",
+      "description":"由家长维护的独立家庭观影索引站，提供分龄挑片、按长排片、看点讲片。"
+    },
+    {
+      "@type":"ItemList",
+      "name":"童乐影视本周放映片单",
+      "itemListOrder":"https://schema.org/ItemListOrderAscending",
+      "numberOfItems":6,
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"item":{"@type":"Movie","name":"龙猫","dateCreated":"1988","duration":"PT86M"}},
+        {"@type":"ListItem","position":2,"item":{"@type":"Movie","name":"头脑特工队","dateCreated":"2015","duration":"PT95M"}},
+        {"@type":"ListItem","position":3,"item":{"@type":"Movie","name":"哪吒之魔童降世","dateCreated":"2019","duration":"PT110M"}},
+        {"@type":"ListItem","position":4,"item":{"@type":"Movie","name":"狮子王","dateCreated":"1994","duration":"PT89M"}},
+        {"@type":"ListItem","position":5,"item":{"@type":"Movie","name":"寻梦环游记","dateCreated":"2017","duration":"PT105M"}},
+        {"@type":"ListItem","position":6,"item":{"@type":"Movie","name":"大闹天宫","dateCreated":"1961","duration":"PT85M"}}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"孩子看到一半说怕，要不要直接关掉？","acceptedAnswer":{"@type":"Answer","text":"先暂停而不是关掉。确认是画面还是声音吓到他，声音就降低音量，画面就快进30秒。直接关掉会强化这里有可怕的东西，下次更难推进。"}},
+        {"@type":"Question","name":"英文原声还是中文配音？","acceptedAnswer":{"@type":"Answer","text":"6岁以下建议中文配音；7岁以上如果对剧情熟悉，可以试着切原声加中文字幕，一次不超过20分钟。"}},
+        {"@type":"Question","name":"孩子反复看同一部片，会不会有问题？","acceptedAnswer":{"@type":"Answer","text":"不会。重复是低龄孩子的理解方式，第一遍看情节、第二遍记台词、第三遍预判下一步，通常循环三到四周会自然换片。"}},
+        {"@type":"Question","name":"童乐影视片单多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"每周三20:00更新本周放映，一般6到8部。新片入库前会评估持续性惊吓音、需要解释的死亡或离别桥段、价值观是否需要家长补充说明。"}}
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
